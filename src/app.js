@@ -16,9 +16,8 @@ const morganOption = (NODE_ENV === 'production')
   : 'common';
 
 app.use(morgan(morganOption))
-app.use(cors({origin: CLIENT_ORIGIN}))
+app.use(cors({origin: 'http://capstone-scifibookclub-client.mascontris.now.sh'}))
 app.use(helmet())
-
 app.use(usersRouter)
 app.use(bookshelfRouter)
 app.use('/auth', authRouter)
