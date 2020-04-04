@@ -3,7 +3,11 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
-const { NODE_ENV, CLIENT_ORIGIN } = require('./config')
+const { NODE_ENV } = require('./config')
+const usersRouter = require('../src/routes/users_router')
+const bookshelfRouter = require('../src/routes/bookshelf_router')
+const authRouter = require('../src/auth/auth-router')
+
 
 const app = express()
 
@@ -15,6 +19,9 @@ app.use(morgan(morganOption))
 app.use(cors({origin: CLIENT_ORIGIN}))
 app.use(helmet())
 
+app.use(usersRouter)
+app.use(bookshelfRouter)
+app.use('/auth', authRouter)
 
 app.get('/', (req, res) => {
   res.send('Hello, corona world!')
