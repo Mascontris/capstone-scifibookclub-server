@@ -153,3 +153,16 @@
 {"message":"Book with id 16 deleted.","level":"info"}
 {"message":"Book with id 6 deleted.","level":"info"}
 {"message":"Book with id 9 deleted.","level":"info"}
+{"message":"User with id 64 created.","level":"info"}
+{"message":"Book with id 17 created.","level":"info"}
+{"message":"Book with id 17 deleted.","level":"info"}
+{"message":"Book with id 18 created.","level":"info"}
+{"message":"User with id 65 created.","level":"info"}
+{"message":"User with id 66 created.","level":"info"}
+{"message":"Book with id 19 created.","level":"info"}
+{"message":"Book with id 20 created.","level":"info"}
+{"message":"Book with id 19 deleted.","level":"info"}
+{"message":"Book with id 21 created.","level":"info"}
+{"message":"Book with id 22 created.","level":"info"}
+{"message":"Book with id 23 created.","level":"info"}
+{"message":"Book with id 24 created.","level":"info"}
