@@ -120,9 +120,11 @@ A book is added from the Google Books API
 
 ```JavaScript
 {
- "name" : "kid5",
- "dob" : "12/13/2015",
- "houehold_id" : "4"
+	"cover_url" : "http://www.fakeurl.com",
+	"title" : "Star Wars",
+	"author" : "Lucas",
+	"description" : "In a galaxy far, far away.",
+	"average_rating" : "10"
 }
 ```
 
@@ -130,77 +132,22 @@ A book is added from the Google Books API
 
 ```JavaScript
 {
-    "id": 34,
-    "name": "kid5",
-    "dob": "12/13/2015, 12:00:00 AM",
-    "household_id": 4,
-    "created_at": "2/10/2020, 12:32:19 AM"
+    "id": 37,
+    "cover_url": "http://www.fakeurl.com",
+    "title": "Star Wars",
+    "author": "Lucas",
+    "description": "In a galaxy far, far away.",
+    "average_rating": 10,
+    "created_at": "2020-04-08T03:22:52.876Z",
+    "user_id": 1
 }
 ```
 
-### ▸ `DELETE /kids`
+### ▸ `DELETE /users/:user_id/bookshelf/:id`
 
-This endpoint allows a user to remove a child, specified by `kid_id`.
+This endpoint allows a user to remove a book from their bookshelf specified by `id`.
 
-If no household could be found by `kid_id`, the server responds with a status `400`.
-
-### Actions Endpoints
-
-### ▸ `GET /actions`
-
-Returns an array of actions created by users.
-
-**Sample query**
-
-```URL
-/actions
-```
-**Example response**
-
-```JSON
-{
-  "id": 61,
-  "description": "Test description of action",
-  "kid_id": 1,
-  "polarity": true,
-  "created_at": "2020-02-10T08:02:54.165Z"
-}
-```
-
-- **`id`**`- string` - uuid of an household post
-- **`description`**`- string` - description of action performed by child.
-- **`kid_id`**`- string` - id associated with child that performed action 
-
-### ▸ `POST /actions`
-
-A new action is created via add action form.
-
-**Example request**
-
-```JavaScript
-{
- "description" : "Played with brother without fighting.",
-  "kid_id" : "1"
-}
-```
-
-> _A successful <small>POST</small> 
-
-```JavaScript
-{
-    "id": 61,
-    "description": "Test description of action",
-    "kid_id": 1,
-    "polarity": true,
-    "created_at": "2020-02-10T08:02:54.165Z"
-}
-```
-
-### ▸ `DELETE /actions`
-
-This endpoint allows a user to remove an action, specified by `action_id`.
-
-If no action could be found by `action_id`, the server responds with a status `400`.
+If no book could be found by `id`, the server responds with a status `400`.
 
 ## Technology Stack
 
